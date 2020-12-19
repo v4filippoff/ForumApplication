@@ -20,11 +20,7 @@ namespace Forum.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
+            ViewBag.IsAuth = HttpContext.User.Identity.IsAuthenticated;
             return View();
         }
 

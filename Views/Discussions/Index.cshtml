@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Forum.Models.Discussion>
+
+@{
+    ViewData["Title"] = ViewBag.Title;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.IsAuth)
+{
+    @section MyDiscussLink {
+        @Html.Partial("MyDiscussLink")
+    }
+
+    <p>
+        <a asp-action="Create" class="create-btn">Create New</a>
+    </p>
+}
+
+<div class="discussions-list">
+    @foreach (var item in Model)
+    {
+        <div class="discussion-item">
+            <div class="link-to-discuss">
+                <a asp-action="Details" asp-route-id="@item.Id">@item.Topic</a>
+            </div>
+            <div class="meta-fields">
+                <span class="username">username</span>
+                <span class="date">@item.Date.ToLongDateString()</span>
+            </div>
+        </div>
+    }
+</div>
