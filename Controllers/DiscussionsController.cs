@@ -25,7 +25,7 @@ namespace ForumApp.Controllers
         {
             ViewBag.Title = "Discussions";
             ViewBag.IsAuth = IsAuth();
-            return View(await _context.Discussions.ToListAsync());
+            return View(await _context.Discussions.Include(d => d.User).ToListAsync());
         }
 
         // GET: Discussions/Details/5
@@ -162,7 +162,7 @@ namespace ForumApp.Controllers
         {
             ViewBag.Title = "My Discussions";
             ViewBag.IsAuth = IsAuth();
-            return View("~/Views/Discussions/Index.cshtml", await _context.Discussions
+            return View("~/Views/Discussions/Index.cshtml", await _context.Discussions.Include(d => d.User)
                 .Where(d => d.UserId == GetUserID()).ToListAsync());
         }
         private bool DiscussionExists(int id)

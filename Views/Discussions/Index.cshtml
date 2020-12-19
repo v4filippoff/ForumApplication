@@ -25,7 +25,7 @@
                 <a asp-action="Details" asp-route-id="@item.Id">@item.Topic</a>
             </div>
             <div class="meta-fields">
-                <span class="username">username</span>
+                <span class="username">@item.User.Email</span>
                 <span class="date">@item.Date.ToLongDateString()</span>
             </div>
         </div>

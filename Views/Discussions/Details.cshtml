@@ -11,39 +11,24 @@
     }
 }
 
-<h1>Details</h1>
+<div class="discuss-details">
 
-<div>
-    <h4>Discussion</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Topic)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Topic)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
-    </dl>
+    <div class="discuss-content">
+        <div class="topic-text">
+            <h3>@Model.Topic</h3>
+            <hr />
+        </div>
+        <div class="discuss-description">
+            <h5>@Model.Description</h5>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="comments-header">
+            <h3>Comments</h3>
+            <hr />
+        </div>
+    </div>
+
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+

@@ -10861,5 +10861,27 @@ a.text-dark:hover, a.text-dark:focus {
     color: #40C100;
     text-decoration: none;
 }
+.nav-link {
+    text-decoration: none;
+    background-image: linear-gradient(red, red);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
 
+.nav-link:hover {
+    background-size: 100% 2px;
+}
+
+.link-to-discuss a{
+    transition: color 0.2s;
+}
+.link-to-discuss:hover a {
+    text-decoration: none;
+    color: #72D0E0;
+}
+.discuss-content {
+    margin-bottom: 80px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
