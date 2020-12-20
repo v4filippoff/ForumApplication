@@ -9,6 +9,7 @@
     @section MyDiscussLink {
         @Html.Partial("MyDiscussLink")
     }
+
 }
 
 <div class="discuss-details">
@@ -20,13 +21,24 @@
         </div>
         <div class="discuss-description">
             <h5>@Model.Description</h5>
+            <div class="meta-fields">
+                <span class="username">@Model.User.Email</span>
+                <span class="date">@Model.Date.ToLongDateString()</span>
+            </div>
         </div>
     </div>
 
     <div class="comments">
         <div class="comments-header">
             <h3>Comments</h3>
+            @if (ViewBag.IsAuth)
+            {
+                <a asp-controller="Comments" asp-action="Create" asp-route-DiscussionId="@Model.Id" class="create-link">Write New</a>
+            }
             <hr />
+        </div>
+        <div class="comments-blocks">
+            @Html.Partial("GetComments")
         </div>
     </div>
 

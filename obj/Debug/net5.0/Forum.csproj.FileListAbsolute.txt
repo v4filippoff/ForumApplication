@@ -186,4 +186,9 @@ C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Areas\Identity\Pag
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\MyDiscussLink.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Forum.csprojAssemblyReference.cache
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Create.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Delete.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Details.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Edit.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Index.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\GetComments.cshtml.g.cs

@@ -10852,12 +10852,12 @@ a.text-dark:hover, a.text-dark:focus {
     float: right;
 }
 
-.create-btn {
+.create-link {
     font-size: 20px;
     transition: color 0.3s;
 }
 
-.create-btn:hover {
+.create-link:hover {
     color: #40C100;
     text-decoration: none;
 }
@@ -10884,4 +10884,5 @@ a.text-dark:hover, a.text-dark:focus {
 .discuss-content {
     margin-bottom: 80px;
 }
+
 /*# sourceMappingURL=bootstrap.css.map */

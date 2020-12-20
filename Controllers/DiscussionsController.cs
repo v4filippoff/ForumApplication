@@ -36,7 +36,7 @@ namespace ForumApp.Controllers
                 return NotFound();
             }
 
-            var discussion = await _context.Discussions
+            var discussion = await _context.Discussions.Include(d => d.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (discussion == null)
             {
@@ -44,13 +44,14 @@ namespace ForumApp.Controllers
             }
 
             ViewBag.IsAuth = IsAuth();
+            ViewBag.Comments = await _context.Comments.Include(c => c.User)
+                .Where(c => c.DiscussionId == id).ToListAsync();
             return View(discussion);
         }
 
         // GET: Discussions/Create
         public IActionResult Create()
         {
-            ViewBag.IsAuth = IsAuth();
             ViewBag.UserId = GetUserID();
             return View();
         }
@@ -68,7 +69,6 @@ namespace ForumApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.IsAuth = IsAuth();
             ViewBag.UserId = GetUserID();
             return View(discussion);
         }

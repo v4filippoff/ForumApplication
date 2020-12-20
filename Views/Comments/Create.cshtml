@@ -1,25 +1,19 @@
-﻿@model Forum.Models.Discussion
+﻿@model Forum.Models.Comment
 
 @{
-    ViewData["Title"] = "Create Discussion";
+    ViewData["Title"] = "Write Comment";
 }
 
 @section MyDiscussLink {
-    @Html.Partial("MyDiscussLink")
+    @Html.Partial("~/Views/Discussions/MyDiscussLink.cshtml")
 }
 
-
-<h4>Create Discussion</h4>
+<h4>Write Comment</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Topic" class="control-label"></label>
-                <input asp-for="Topic" class="form-control" />
-                <span asp-validation-for="Topic" class="text-danger"></span>
-            </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
                 <textarea asp-for="Description" class="form-control" rows="6"></textarea>
@@ -27,15 +21,16 @@
             </div>
             <input type="hidden" asp-for="Date" value="@DateTime.Today.Date" />
             <input type="hidden" asp-for="UserId" value="@ViewBag.UserId" />
+            <input type="hidden" asp-for="DiscussionId" value="@ViewBag.DiscussionId" />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Write" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Discussions" asp-action="Details" asp-route-id="@ViewBag.DiscussionId">Back to Discussion</a>
 </div>
 
 @section Scripts {
