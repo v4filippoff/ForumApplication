@@ -192,3 +192,4 @@ C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Det
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Edit.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Index.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\GetComments.cshtml.g.cs
+C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Forum.csprojAssemblyReference.cache
