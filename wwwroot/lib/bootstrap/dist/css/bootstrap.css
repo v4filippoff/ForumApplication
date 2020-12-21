@@ -10894,11 +10894,24 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 18px;
 }
 .comm-block {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .comm_description {
     padding: 20px;
     background-color: #ededed;
     border-radius: 10px;
 }
+.delete-comm-link {
+    float: right;
+    margin-right: 20px;
+    color: #dc3545;
+    transition: color 0.1s;
+}
+.delete-comm-link:hover {
+    color: #9d2531;
+    text-decoration: none;
+}
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */

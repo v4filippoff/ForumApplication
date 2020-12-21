@@ -1,13 +1,17 @@
 ﻿
 @foreach (var item in ViewBag.Comments)
 {
-<div class="comm-block">
-    <div class="comm_description">
-        @item.Description
+    <div class="comm-block">
+        @if (ViewBag.UserId == item.UserId)
+        {
+            <a class="delete-comm-link" asp-controller="Comments" asp-action="Delete" asp-route-id="@item.Id">Delete</a>     
+        }
+        <div class="comm_description">
+            @item.Description
+        </div>
+        <div class="meta-fields">
+            <span class="username">@item.User.Email</span>
+            <span class="date">@item.Date.ToLongDateString()</span>
+        </div>
     </div>
-    <div class="meta-fields">
-        <span class="username">@item.User.Email</span>
-        <span class="date">@item.Date.ToLongDateString()</span>
-    </div>
-</div>
 }

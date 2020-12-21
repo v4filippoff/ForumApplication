@@ -171,9 +171,7 @@ C:\Users\Вадим\source\repos\Forum\bin\Debug\net5.0\runtimes\win-arm64\nativ
 C:\Users\Вадим\source\repos\Forum\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Вадим\source\repos\Forum\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\Create.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\Delete.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\Details.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\Edit.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\Index.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Вадим\source\repos\Forum\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -188,8 +186,5 @@ C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Areas\Identity\Pag
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\MyDiscussLink.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Create.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Delete.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Details.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Edit.cshtml.g.cs
-C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Comments\Index.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Razor\Views\Discussions\GetComments.cshtml.g.cs
 C:\Users\Вадим\source\repos\Forum\obj\Debug\net5.0\Forum.csprojAssemblyReference.cache

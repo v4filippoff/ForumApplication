@@ -46,6 +46,7 @@ namespace ForumApp.Controllers
             ViewBag.IsAuth = IsAuth();
             ViewBag.Comments = await _context.Comments.Include(c => c.User)
                 .Where(c => c.DiscussionId == id).ToListAsync();
+            ViewBag.UserId = GetUserID();
             return View(discussion);
         }
 
@@ -71,91 +72,6 @@ namespace ForumApp.Controllers
             }
             ViewBag.UserId = GetUserID();
             return View(discussion);
-        }
-
-        // GET: Discussions/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var discussion = await _context.Discussions.FindAsync(id);
-            if (discussion == null)
-            {
-                return NotFound();
-            }
-
-            ViewBag.IsAuth = IsAuth();
-            return View(discussion);
-        }
-
-        // POST: Discussions/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Topic,Description,Date,UserId")] Discussion discussion)
-        {
-            if (id != discussion.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(discussion);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DiscussionExists(discussion.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewBag.IsAuth = IsAuth();
-            return View(discussion);
-        }
-
-        // GET: Discussions/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var discussion = await _context.Discussions
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (discussion == null)
-            {
-                return NotFound();
-            }
-
-            ViewBag.IsAuth = IsAuth();
-            return View(discussion);
-        }
-
-        // POST: Discussions/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            ViewBag.IsAuth = HttpContext.User.Identity.IsAuthenticated;
-            var discussion = await _context.Discussions.FindAsync(id);
-            _context.Discussions.Remove(discussion);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> MyDiscussions()
